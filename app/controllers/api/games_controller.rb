@@ -4,9 +4,9 @@ class Api::GamesController < ApplicationController
    
 
 def body_params
-  params['number']
+ 
 correct_number = 32
-@number_guess = correct_number
+@number_guess = params['number'].to_i
 
   if @number_guess > correct_number
     p "too high"
